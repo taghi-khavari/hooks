@@ -1,10 +1,13 @@
 import "./styles.css";
+import { useBattery } from "./hooks/useBattery";
 
 export default function App() {
+  const battery = useBattery();
+
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>Useful Hooks</h1>
+      <pre>battery is: {JSON.stringify(battery)}</pre>
     </div>
   );
 }
